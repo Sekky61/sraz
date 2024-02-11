@@ -1,3 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div class="h-20 w-20 bg-red-500"></div>
+<script>
+	import { Button } from 'flowbite-svelte';
+</script>
+
+<div class="flex h-screen flex-col items-center justify-center space-y-4">
+	<div class="flex flex-col items-center space-y-2">
+		<h1 class="text-4xl font-bold tracking-tighter sm:text-5xl">Vítej ve Třídě</h1>
+	</div>
+	<div class="flex items-center space-x-2">
+		<Button href="/dashboard">Vstup</Button>
+	</div>
+</div>
