@@ -4,6 +4,7 @@ export type Availability = "yes" | "no" | "maybe";
 
 // dates in the format "YYYY-MM-DD"
 export type Event = {
+	name: string;
 	dateFrom: string;
 	dateTo: string;
 	note: string;

@@ -11,20 +11,8 @@ export type NewDateFormData = {
 };
 
 export const actions = {
-	default: async ({ request, cookies }) => {
+	default: async ({ request }) => {
 		const data = await request.formData();
-
-		const name = data.get("name");
-		const dateFrom = data.get("dateFrom");
-		const dateTo = data.get("dateTo");
-		const note = data.get("note");
-		const availability = data.get("availability");
-
-		// Validate
-
-		console.log("event", data);
-		console.log("name", name);
-		console.log("dateFrom", dateFrom);
 
 		// Append the new event to the classmate's events array
 		await validateAppendEvent(data);

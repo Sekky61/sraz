@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { RootDates } from '$lib/schema';
-	import Timeline from './timeline.svelte';
+	import Timeline from './Timeline.svelte';
 	import Person from './Person.svelte';
 
 	export let data;
@@ -17,4 +16,4 @@
 	<p>Loading...</p>
 {/if}
 <Person dates={data.dates} />
-<Timeline />
+<Timeline dates={data.dates} />

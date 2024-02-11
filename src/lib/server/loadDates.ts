@@ -38,7 +38,13 @@ export async function appendEvent(formData: FormData) {
 	const availability = formData.get("availability");
 
 	// Validate
-	if (!name || !dateFrom || !dateTo || !note || !availability) {
+	if (
+		name === null ||
+		dateFrom === null ||
+		dateTo === null ||
+		note === null ||
+		availability === null
+	) {
 		console.dir({ name, dateFrom, dateTo, note, availability });
 		throw new Error("Invalid form data");
 	}
@@ -57,7 +63,7 @@ export async function appendEvent(formData: FormData) {
 		throw new Error("Invalid availability");
 	}
 
-	const event = { dateFrom, dateTo, note, availability };
+	const event = { dateFrom, dateTo, note, availability, name };
 
 	const dates = await loadDates();
 	const classmate = dates[name];
